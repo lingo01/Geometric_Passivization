@@ -5,7 +5,7 @@ Data and code of the article "Positive Damping Region: A Graphic Tool for Passiv
 
 This source code repository accompanies the following paper:
 
-> X. Peng, and F. Liu, "Positive Damping Region: A Graphic Tool for Passivization Analysis with Passivity Index," 2025.
+> X. Peng, X. Ru, Z. Li, J. Zhang, X. Chen, and F. Liu, "Positive Damping Region: A Graphic Tool for Passivization Analysis with Passivity Index," 2025.
 
 The full paper and the source code can be found at: https://github.com/lingo01/Geometric_Passivization
 
@@ -76,3 +76,4 @@ To reproduce all main results and figures:
 1. Ensure all `.m` files are in the same directory.
 2. Open MATLAB and set the working directory to this folder.
 3. Run each script as listed in the table above to generate the corresponding figure.
+
