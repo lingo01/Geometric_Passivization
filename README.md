@@ -68,7 +68,7 @@ These functions are called by the main scripts to generate regions, perform Nyqu
 
 -  `MATLAB 2018a`  or newer version.
 -  Control System Toolbox  of MATLAB software for calling `tf`, `bode`, `nyquist`.
--  YALMIP and SeDuMi Toolbox to solve LMI in control designs for calling `sdpsettings`, `optimize`.
+-  YALMIP and SeDuMi Toolbox to solve LMI in control designs for calling `sdpsettings`, `optimize`. (LMI solvers are defined in `func_solve_PI_passivity` and `func_plot_PI_feasible_region`. You can adjust them to your preferred ones.)
 
 
 ## Notes
