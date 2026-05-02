@@ -1,11 +1,10 @@
-
 # Geometric_Passivization
 
 Data and code of the article "Positive Damping Region: A Graphic Tool for Passivization Analysis with Passivity Index"
 
 This source code repository accompanies the following paper:
 
-> X. Peng, X. Ru, Z. Li, J. Zhang, X. Chen, and F. Liu, "Positive Damping Region: A Graphic Tool for Passivization Analysis with Passivity Index," 2025.
+> X. Peng, and F. Liu, "Positive Damping Region: A Graphic Tool for Passivization Analysis with Passivity Index," 2026, *arXiv preprint arXiv:2601.10475*. doi: [ https://doi.org/10.48550/arXiv.2601.10475](https://doi.org/10.48550/arXiv.2601.10475).
 
 The full paper and the source code can be found at: https://github.com/lingo01/Geometric_Passivization
 
@@ -25,14 +24,16 @@ This repository provides the implementation for generating all main figures in t
 
 ## Code-Figure Correspondence
 
-| Figure in Paper | MATLAB Script           | Description                                      |
-|-----------------|------------------------|--------------------------------------------------|
-| Fig.3         | `main_Illu_2_Ctrl.m`   | Nichols chart with positive damping region overlay |
-| Fig.4        | `main_Simu_1_SISO.m`   | SISO system Nyquist plots with positive damping region overlay |
-| Fig.5        | `main_Simu_1_MIMO.m`   | MIMO system Rayleigh quotient region  with positive damping region overlay |
-| Fig.6        | `main_Simu_2.m`        | SISO system Nyquist plots with positive damping region (defined by differential passivity, or equivalently, negative imaginariness) overlay |
-| Fig.7        | `main_Simu_3_EX2.m`    | 3D positive damping region of the definition Example 2 and Nyquist overlay |
-| Fig.8        | `main_Simu_3_EX3.m`    | 3D positive damping regions of the definitions Example 2 and Example 3 and Nyquist overlay |
+| Figure in Paper | MATLAB Script        | Description                                                  |
+| --------------- | -------------------- | ------------------------------------------------------------ |
+| Fig.3           | `main_Illu_2_Ctrl.m` | Nichols chart with positive damping region overlay           |
+| Fig.4           | `main_Simu_1_SISO.m` | SISO system Nyquist plots with positive damping region overlay |
+| Fig.5           | `main_Simu_1_MIMO.m` | MIMO system Rayleigh quotient region  with positive damping region overlay |
+| Fig.6           | `main_Simu_2.m`      | SISO system Nyquist plots with positive damping region (defined by differential passivity, or equivalently, negative imaginariness) overlay |
+| Fig.7           | `main_Simu_3_EX2.m`  | 3D positive damping region of the definition Example 2 and Nyquist overlay |
+| Fig.8           | `main_Simu_3_EX3.m`  | 3D positive damping regions of the definitions Example 2 and Example 3 and Nyquist overlay |
+| Fig.10          | `main_Ctrl.m`        | Transient simulation of power inverters based on the proposed method. |
+| Fig.11          | `main_Ctrl.m`        | Passivity-aware control designs of power inverters based on the proposed method. |
 
 
 ## How to Generate Each Figure
@@ -53,14 +54,21 @@ The following supporting function files are required and should be present in th
 - `func_PRPregion_EX3.m`
 - `func_Nyquist.m`
 - `func_checkNyquist.m`
+- `func_solve_PI_passivity`
+- `func_plot_PI_feasible_region`
+- `setting_params`
+- `calc_power`
+- `calc_dynamics`
+- `calc_equilibrium`
 
 These functions are called by the main scripts to generate regions, perform Nyquist calculations, and check passivity.
 
 
 ## Requirements
 
--  `MATLAB 2018a`  or newer version
-- Control System Toolbox  of MATLAB software for calling `tf`, `bode`, `nyquist`
+-  `MATLAB 2018a`  or newer version.
+-  Control System Toolbox  of MATLAB software for calling `tf`, `bode`, `nyquist`.
+-  YALMIP and SeDuMi Toolbox to solve LMI in control designs for calling `sdpsettings`, `optimize`.
 
 
 ## Notes
@@ -76,4 +84,3 @@ To reproduce all main results and figures:
 1. Ensure all `.m` files are in the same directory.
 2. Open MATLAB and set the working directory to this folder.
 3. Run each script as listed in the table above to generate the corresponding figure.
-
