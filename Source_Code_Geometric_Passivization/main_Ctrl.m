@@ -60,9 +60,9 @@ param_b = 0.5;
 
 [kp, ki, is_feasible] = func_solve_PI_passivity(no_ctrl_tf, sigma_target, freq_target, param_a, param_b);
 
-% if is_feasible
-%     func_plot_PI_feasible_region(no_ctrl_tf, sigma_target, freq_target, param_a, param_b);
-% end
+if is_feasible
+    func_plot_PI_feasible_region(no_ctrl_tf, sigma_target, freq_target, param_a, param_b);
+end
 
 %% Frequency-domain comparison
 
